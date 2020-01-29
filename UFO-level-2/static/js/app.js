@@ -29,17 +29,17 @@ button.on("click", function() {
 	var inputState = d3.select("#state");
 	var inputStateValue = inputState.property("value");
 	if (inputStateValue != "") {
-		filteredData.filter(alien => alien.state.toLowerCase() === inputStateValue.toLowerCase());
+		filteredData = filteredData.filter(alien => alien.state.toLowerCase() === inputStateValue.toLowerCase());
 	}
 	var inputCountry = d3.select("#country");
 	var inputCountryValue = inputCountry.property("value");
 	if (inputCountryValue != "") {
-		filteredData.filter(alien => alien.country.toLowerCase() === inputCountryValue.toLowerCase());
+		filteredData = filteredData.filter(alien => alien.country.toLowerCase() === inputCountryValue.toLowerCase());
 	}
 	var inputShape = d3.select("#shape");
 	var inputShapeValue = inputShape.property("value");
 	if (inputShapeValue != "") {
-		filteredData.filter(alien => alien.shape.toLowerCase() === inputShapeValue.toLowerCase());
+		filteredData = filteredData.filter(alien => alien.shape.toLowerCase() === inputShapeValue.toLowerCase());
 	}
 	
 	tbody.html("")
